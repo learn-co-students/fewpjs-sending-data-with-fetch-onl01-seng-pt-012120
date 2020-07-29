@@ -21,6 +21,7 @@ function submitData(userName, userEmail) {
     let h1 = document.createElement("h1")
     h1.innerText = id
     main.appendChild(h1)
+    console.log(main)
   }
 
   function renderError(msg) {

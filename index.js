@@ -17,11 +17,10 @@ function submitData(userName, userEmail) {
 
   function renderInfo(json) {
     const main = document.querySelector('main')
-    let id = json.id
-    let h1 = document.createElement("h1")
+    const id = json.id
+    const h1 = document.createElement("h1")
     h1.innerText = id
     main.appendChild(h1)
-    console.log(main)
   }
 
   function renderError(msg) {

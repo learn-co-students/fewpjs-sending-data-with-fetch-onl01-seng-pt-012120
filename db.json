@@ -34,7 +34,13 @@
       "id": 2
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "name": "danny",
+      "email": "dan.orendorff@gmail.com",
+      "id": 1
+    }
+  ],
   "robots": [
     {
       "robotName": "C8-09S100K",

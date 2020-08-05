@@ -10,23 +10,19 @@ let submitData = (name,email) => {
         body: JSON.stringify(formData)
     };
 
-    // let configDom = (json) =>{
-    //     let body = document.getElementById('body');
-    //     div.innerText = json.id;
-    //     console.log(div.innerText)
-    //     body.appendChild(div);
-    // };
+    let configDom = (json) =>{
+        let body = document.getElementById('body');
+        let div = document.createElement('div');
+        div.innerText = json.id;
+        console.log(div.innerText)
+        body.appendChild(div);
+    };
 
     return fetch('http://localhost:3000/users', configObj)
     .then(resp => resp.json())
-    .then(json => {
-        document.body.append(json.id);
-    })
+    .then(json => configDom(json))
     .catch (function (error) {
-        if (error.code = '401') {
-            document.body.append('Unauthorized Access')
-            alert('Unauthorized Access');
-        }
+        alert('Unauthorized Access');
     });
 
 };

@@ -12,6 +12,7 @@ let submitData = (name,email) => {
 
     // let configDom = (json) =>{
     //     let body = document.getElementById('body');
+    //     let div = document.createElement('div');
     //     div.innerText = json.id;
     //     console.log(div.innerText)
     //     body.appendChild(div);
@@ -24,7 +25,6 @@ let submitData = (name,email) => {
     })
     .catch (function (error) {
         if (error.code = '401') {
-            document.body.append('Unauthorized Access')
             alert('Unauthorized Access');
         }
     });

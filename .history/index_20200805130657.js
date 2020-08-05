@@ -12,9 +12,10 @@ let submitData = (name,email) => {
 
     fetch('http://localhost:3000/users', configObj)
     .then(resp => resp.json())
-    .then(json => console.log(json))
+    .then(json => configDom(json))
     .catch (function (error) {
         alert('Unauthorized Access');
+        console.log(error.message);
     });
 
     let configDom = (json) =>{

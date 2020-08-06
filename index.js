@@ -10,12 +10,6 @@ let submitData = (name,email) => {
         body: JSON.stringify(formData)
     };
 
-    // let configDom = (json) =>{
-    //     let body = document.getElementById('body');
-    //     div.innerText = json.id;
-    //     console.log(div.innerText)
-    //     body.appendChild(div);
-    // };
 
     return fetch('http://localhost:3000/users', configObj)
     .then(resp => resp.json())
